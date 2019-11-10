@@ -1,0 +1,17 @@
+
+1. change your matlab directory to include this folder
+
+2. if you want to extract ENF and features from existing data first follow steps 3:5 , if you want to work on extracted ENF skip to step 6,
+ And if you want to train the classifier from already extracted features skip into step 7.
+
+3. open SPcup.m
+
+4. change the path in line 7 into the path that includes all training, practice, and test data. 
+
+5. run SPcup.m ; first section labeled "ENF Extraction" takes about 18 minutes, Using FFT with 2^16 number of bits and nonoverlapping windows of 5seconds;
+ you can adjust that from the functions but 2^16 is for min acceptable resolution.
+
+6. if you want to just load the already extracted ENF you can leave the first section commented.
+
+7. run old_trainNN.m to train classifier and predict the practice data; it gives a probability of error using some of the training data as unknowns
+ and it fives class predictions for practice data.
